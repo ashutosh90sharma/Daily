@@ -1,0 +1,389 @@
+1)add function : a+b 
+#include <stdio.h>
+void add(int a,int b);
+
+int main()
+{
+    int num,num1;
+    scanf("%d %d",&num,&num1);
+    
+       add(num,num1);
+    return 0;
+}
+void add(int a,int b){
+    int c=a+b;
+    printf("%d",c);
+}
+===================
+2)
+add() =>a+b 
+sub()=>a-b 
+div() =>1/b 
+multi =>a*b 
+mod =>a%b 
+
+#include <stdio.h>
+void add(int a,int b);
+void sub(int a,int b);
+void multi(int a,int b);
+void divi(int a,int b);
+void mod(int a,int b);
+
+int main()
+{
+    int num,num1;
+    scanf("%d %d",&num,&num1);
+    
+       add(num,num1);
+       printf("\n");
+       sub(num,num1);
+       printf("\n");
+       multi(num,num1);
+       printf("\n");
+       divi(num,num1);
+       printf("\n");
+       mod(num,num1);
+    return 0;
+}
+void add(int a,int b){
+    int c=a+b;
+    printf("%d",c);
+}
+void sub(int a,int b){
+    int c=a-b;
+    printf("%d",c);
+}
+void multi(int a,int b){
+    int c=a*b;
+    printf("%d",c);
+    
+}
+void divi(int a,int b){
+    int c=a/b;
+    printf("%d",c);
+    
+}
+void mod(int a,int b){
+    int c=a%b;
+    printf("%d",c);
+    
+}
+=======================================
+3)
+voter() =>voter id 
+checkNumber() =>odd even 
+
+#include <stdio.h>
+void voterid(int a);
+void chekNumber(int b);
+
+
+int main()
+{
+    int age,num1;
+    scanf("%d %d",&age,&num1);
+    
+       voterid(age);
+       printf("\n");
+       chekNumber(num1);
+       
+    return 0;
+}
+void voterid(int a){
+    if(a>18){
+        printf("eligable for voting");
+    }
+    else{
+        printf("not eligable for voting");
+    }
+}
+void chekNumber(int b){
+    if(b%2==0){
+        printf("number is even");
+    }
+    else{
+        printf("number is odd");
+    }
+}
+===============================================================
+5) 
+factorial() =>factorial code 
+fibonacci() 
+armstrong number()
+pallindrome()
+reverseNumber()
+prime() 
+swap()
+
+
+
+#include <stdio.h>
+void factorial(int n); 
+void fibonacci(int a, int b, int iter); 
+void armstrongnumber(int k);
+void pallindrome(int k);
+void reverseNumber(int k);
+void prime(int p); 
+void swap(int a,int b,int n); 
+
+int main()
+{ 
+    int n;
+    printf("enter the value of n for factorial");
+     scanf("%d",&n);
+     factorial(n);
+     printf("\n");
+     int a,b,iter;
+     printf("enter the value of a, b, iter for fibonacci");
+     scanf("%d %d %d",&a,&b,&iter);
+     fibonacci( a,b,iter);
+     printf("\n");
+     int k;
+     printf("enter the value of k for armstrongnumber");
+     scanf("%d",&k);
+     armstrongnumber(k);
+     printf("\n");
+     pallindrome(k);
+     printf("\n");
+     reverseNumber(k);
+     printf("\n");
+     int p;
+     printf("enter the value of p for prime");
+     scanf("%d",&p);
+     prime(p);
+     printf("\n");
+     swap(a,b,n); 
+     
+    
+
+    return 0;
+}
+void factorial(int n){
+    
+    int f=1;
+    while(n>=1){
+        f=f*n;
+        n--;
+    }
+    printf("%d",f);
+    
+}
+void fibonacci(int a, int b, int iter){
+    int  c, i ;
+
+   
+   
+   printf("%d %d ",a,b);
+
+   for(i = 1; i <= iter-2; i++) {
+      c = a + b;
+      printf("%d ", c);
+      
+      a = b;
+      b = c;
+   }
+    
+}
+void armstrongnumber(int k){
+    
+    int n1=k;
+    int sum=0;
+    while(k>0){
+        int digit=k%10;
+        sum+=digit*digit*digit;
+        k/=10;
+    }
+    if(sum==n1){
+        printf("number is armstrongnumber");
+    }
+    else{
+        printf("number is not armstrongnumber");
+    }
+    
+}
+void pallindrome(int k){
+    
+    int n1=k;
+    int rev=0;
+    while(k>0){
+        int digit=k%10;
+        rev=rev*10+digit;
+        k/=10;
+    }
+    if(rev==n1){
+        printf("number is pallindrome");
+        
+    }
+    else{
+        printf("not pallindrome");
+    }
+    
+    
+}
+void reverseNumber(int k){
+    
+   
+    int rev=0;
+    while(k>0){
+        int digit=k%10;
+        rev=rev*10+digit;
+        k/=10;
+    }
+    printf("%d",rev);
+    
+}
+void prime(int p){
+    
+    int count=0;
+    int i=2;
+    while(i<p){
+        if(p%i==0){
+            count++;
+        }
+        i++;
+    }
+    if(count==0){
+        printf("number is prime");
+    }
+    else{
+        printf("not prime");
+    }
+    
+    
+    
+}
+void swap(int a,int b,int n){
+    
+    if(n==1){
+        printf("first way of swap");
+        a=a-b;
+        b=a+b;
+        a=a-b;
+        printf("%d %d",a,b);
+        
+    }
+    else if(n==2){
+        printf("second way of swap");
+        int temp=a;
+        a=b;
+        b=temp;
+        printf("%d %d",a,b);
+        
+    }
+    else if(n==3){
+        printf("second way of swap");
+        a=a*b;
+        b=a/b;
+        a=a/b;
+          printf("%d %d",a,b);
+        
+    }
+    
+} 
+============================================================
+checkNumber() 
+user input : 7,2,5 
+7 =>number 7 se divisbile present or not 
+
+5+number 5 se divisiblee present or not 
+
+#include <stdio.h>
+ 
+void checkNumber(int n); 
+
+int main()
+{    
+    int n;
+     scanf("%d",&n);
+     checkNumber(n); 
+     
+    
+
+    return 0;
+}
+
+void checkNumber(int n){
+    
+    if(n%5==0){
+        printf("number is divisible by 5");
+       
+        
+    }
+    else if(n%2==0){
+        printf("number is divisible by 2");
+        
+        
+    }
+    else if(n%7==0){
+        printf("number is divisible by 7");
+       
+        
+    }
+    
+} 
+===================================================
+checkAlpha : lower ya upper case 
+
+checkVowel :vowel ya consonat 
+
+leap() =>code 
+
+#include <stdio.h>
+ 
+void checkAlpha(char ch);
+void checkVovelcon(char c);
+void leepyear(int year);
+
+int main()
+{
+     char ch;
+    scanf("%c",&ch);
+     checkAlpha(ch); 
+     printf("\n");
+     int year;
+    scanf("%d",&year);
+     
+     leepyear(year);
+     printf("\n");
+     char c;
+    scanf("%c",&c);
+     
+     checkVovelcon(c);
+     
+     
+    
+
+    return 0;
+}
+
+void checkAlpha(char ch){
+    
+    if('a'<=ch<='z'){
+        printf("lower case");
+    }
+    else if('A'<=ch<='Z'){
+        printf("Upper case");
+    }
+    
+} 
+void checkVovelcon(char c){
+    
+    if(c =='a'||c =='e'||c =='i'||c =='o'||c =='u'){
+        printf("vovel");
+    }
+    else{
+        printf("consonent");
+    }
+}
+void leepyear(int year){
+    
+    if(year%4==0){
+        printf("leap year");
+    }
+    else{
+        printf("not a leep year");
+    }
+}
+
+
+
