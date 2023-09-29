@@ -1,0 +1,48 @@
+#include <stdio.h>
+int debit();
+int withdraw();
+
+int main()
+{
+   printf("enter 'd' for debit and 'w' for withdraw");
+   char ch;
+   scanf("%c",&ch);
+   if(ch=='d'){
+       printf("%d",debit());
+   }
+   else{
+       printf("%d",withdraw());
+   }
+
+    return 0;
+}
+int debit(){
+    int bank_balance=60000;
+    printf("enter the amount how much you debit");
+    int amount;
+    scanf("%d",&amount);
+    if(amount>50000){
+        amount-=(amount*5)/100;
+        bank_balance+=amount;
+    }
+    else{
+        bank_balance+=amount;
+        
+    }
+    return bank_balance;
+}
+int withdraw(){
+    int bank_balance=60000;
+    printf("enter the amount how much you withdraw");
+    int amount;
+    scanf("%d",&amount);
+    if(amount>=50000){
+        bank_balance-=amount;
+        bank_balance-=(amount*5)/100;
+        
+    }
+    else{
+        bank_balance-=amount;
+    }
+    return bank_balance;
+}
