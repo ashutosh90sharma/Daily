@@ -1,0 +1,679 @@
+		MULTILEVEL INHERITANCE 
+1)normal printing 
+class A
+hello
+
+class B 
+hiii
+
+class C 
+byee
+
+
+class D 
+how r u 
+
+class A{
+    void Show1(){
+        System.out.println("hello");
+    }
+
+}
+class B extends A{
+    void Show2(){
+        System.out.println("hi");
+    }
+
+}
+class C extends B{
+    void Show3(){
+        System.out.println("how are you");
+    }
+
+}
+class D extends  C{
+    void Show4(){
+        System.out.println("bye");
+    }
+
+}
+
+
+public class Pattern1 {
+
+    public static void main(String[] args) {
+        D k=new D();
+        k.Show1();
+        k.Show2();
+        k.Show3();
+        k.Show4();
+        
+
+
+    }
+}
+--------------------------------------
+2)getter setter 
+class A
+3
+
+class B 
+2
+
+class C 
+3
+
+
+class D 
+1 
+
+user input 
+
+class A{
+    int a,b,c;
+    void SetA(int a,int b,int c){
+        this.a=a;
+        this.b=b;
+        this.c=c;
+
+    }
+    int getAa(){
+        return a;
+
+    }
+    int getAb(){
+        return b;
+    }
+    int getAc(){
+        return c;
+    }
+
+
+
+}
+class B extends A{
+    int d,e;
+    void SetB(int d,int e){
+        this.d=d;
+        this.e=e;
+    }
+    int getBd(){
+        return d;
+    }
+    int getBe(){
+        return e;
+    }
+
+
+}
+class C extends B{
+    int f,g,h;
+    void SetA(int f,int g,int h){
+        this.f=f;
+        this.g=g;
+        this.h=h;
+
+    }
+    int getCf(){
+        return f;
+
+    }
+    int getCg(){
+        return g;
+    }
+    int getCh(){
+        return h;
+    }
+
+
+}
+class D extends  C{
+    int i;
+    void SetD(int i){
+        this.i=i;
+    }
+    int getDi(){
+        return i;
+    }
+
+
+}
+
+
+public class Pattern1 {
+
+    public static void main(String[] args) {
+        D k=new D();
+       k.SetB(5,6);
+        System.out.println(k.getBd());
+        System.out.println(k.getBe());
+
+
+
+    }
+}
+---------------------------------
+3)
+class A
+method1() :no return and no argument 
+method2():no return and  argument 
+
+class B 
+method3() : return and no argument 
+method4(): return and  argument 
+
+class C 
+method5()no return and no argument 
+
+method6()no return and  argument 
+
+
+class D 
+method7()return and no argument 
+method8() return and  argument 
+
+user input 
+class A{
+    void method1(){
+        System.out.println("hi");
+    }
+    void method2(int a,int b){
+        System.out.println(a+b);
+    }
+
+
+
+
+}
+class B extends A{
+    int  method3(){
+        return 1;
+    }
+    int  method4(int a,int b){
+        return a+b;
+    }
+
+
+}
+class C extends B{
+    void method5(){
+        System.out.println("hello");
+    }
+    void method6(int a,int b){
+        System.out.println(a-b);
+    }
+
+
+
+}
+class D extends  C{
+    int  method7(){
+        return 4;
+    }
+    int  method8(int a,int b){
+        return a*b;
+    }
+
+
+
+}
+
+
+public class Pattern1 {
+
+    public static void main(String[] args) {
+        D k=new D();
+       k.method3();
+        System.out.println( k.method4(4,7));
+
+
+
+
+    }
+}
+---------------------------------------------------------------------
+4)
+9 classes 
+her ek class return type data type 
+String class ka type 
+
+class A{
+    int a;
+    int show1(){
+        return a;
+    }
+
+
+
+
+
+
+
+}
+class B extends A{
+    char a;
+    char show2(){
+        return a;
+    }
+
+
+
+
+
+}
+class C extends B{
+    float f;
+    float show3(){
+        return f;
+    }
+
+
+
+
+}
+class D extends  C{
+    double f;
+    double show4(){
+        return f;
+    }
+
+
+
+
+}
+class  E extends D{
+    byte f;
+    byte show5(){
+        return f;
+    }
+}
+class  F extends E{
+    short f;
+    short show6(){
+        return f;
+    }
+}
+class G extends F{
+    boolean f;
+    boolean show7(){
+        return f;
+    }
+}
+class  H extends G{
+    long f;
+    long show8(){
+        return f;
+    }
+}
+class  I extends H{
+    String f;
+    String show9(){
+        return f;
+    }
+}
+
+
+public class Pattern1 {
+
+    public static void main(String[] args) {
+        I k=new I();
+        System.out.println(k.show1());
+        System.out.println(k.show2());
+        System.out.println(k.show3());
+        System.out.println(k.show4());
+        System.out.println(k.show5());
+        System.out.println(k.show6());
+        System.out.println(k.show7());
+        System.out.println(k.show8());
+        System.out.println(k.show9());
+
+
+
+
+
+
+    }
+}
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+		HEIRARICHAL INHERITANCE 
+1)normal printing 
+class A
+hello
+
+class B 
+hiii
+
+class C 
+byee
+
+
+class D 
+how r u 
+class A{
+    void Show1(){
+        System.out.println("hello");
+    }
+
+}
+class B extends A{
+    void Show2(){
+        System.out.println("hi");
+    }
+
+}
+class C extends A{
+    void Show3(){
+        System.out.println("how are you");
+    }
+
+}
+class D extends  C{
+    void Show4(){
+        System.out.println("bye");
+    }
+
+}
+
+
+public class Pattern1 {
+
+    public static void main(String[] args) {
+        B b=new B();
+        D k=new D();
+        k.Show1();
+        b.Show2();
+        k.Show3();
+        k.Show4();
+
+
+
+    }
+}
+--------------------------------------
+2)getter setter 
+class A
+3
+
+class B 
+2
+
+class C 
+3
+
+
+class D 
+1 
+
+user input 
+
+import java.util.Scanner;
+class A{
+    int a,b,c;
+    void SetA(int a,int b,int c){
+        this.a=a;
+        this.b=b;
+        this.c=c;
+
+    }
+    int getAa(){
+        return a;
+
+    }
+    int getAb(){
+        return b;
+    }
+    int getAc(){
+        return c;
+    }
+
+
+
+}
+class B extends A{
+    int d,e;
+    void SetB(int d,int e){
+        this.d=d;
+        this.e=e;
+    }
+    int getBd(){
+        return d;
+    }
+    int getBe(){
+        return e;
+    }
+
+
+}
+class C extends A{
+    int f,g,h;
+    void SetA(int f,int g,int h){
+        this.f=f;
+        this.g=g;
+        this.h=h;
+
+    }
+    int getCf(){
+        return f;
+
+    }
+    int getCg(){
+        return g;
+    }
+    int getCh(){
+        return h;
+    }
+
+
+}
+class D extends  C{
+    int i;
+    void SetD(int i){
+        this.i=i;
+    }
+    int getDi(){
+        return i;
+    }
+
+
+}
+
+
+public class Pattern1 {
+
+    public static void main(String[] args) {
+        B b=new B();
+        D k=new D();
+        b.SetB(5,6);
+        System.out.println(b.getBd());
+        System.out.println(b.getBe());
+        k.SetA(1,2,3);
+        System.out.println(k.getAa());
+        System.out.println(k.getAb());
+        System.out.println(k.getAc());
+
+
+
+    }
+}
+---------------------------------
+3)
+class A
+method1() :no return and no argument 
+method2():no return and  argument 
+
+class B 
+method3() : return and no argument 
+method4(): return and  argument 
+
+class C 
+method5()no return and no argument 
+
+method6()no return and  argument 
+
+
+class D 
+method7()return and no argument 
+method8() return and  argument 
+
+user input 
+class A{
+    void method1(){
+        System.out.println("hi");
+    }
+    void method2(int a,int b){
+        System.out.println(a+b);
+    }
+
+
+
+
+}
+class B extends A{
+    int  method3(){
+        return 1;
+    }
+    int  method4(int a,int b){
+        return a+b;
+    }
+
+
+}
+class C extends A{
+    void method5(){
+        System.out.println("hello");
+    }
+    void method6(int a,int b){
+        System.out.println(a-b);
+    }
+
+
+
+}
+class D extends  C{
+    int  method7(){
+        return 4;
+    }
+    int  method8(int a,int b){
+        return a*b;
+    }
+
+
+
+}
+
+
+public class Pattern1 {
+
+    public static void main(String[] args) {
+        B b=new B();
+        D k=new D();
+        b.method3();
+        System.out.println( b.method4(4,7));
+        k.method7();
+        System.out.println(k.method8(4,6));
+
+
+
+
+    }
+}
+---------------------------------------------------------------------
+4)
+9 classes 
+her ek class return type data type 
+String class ka type 
+
+class A{
+    int a;
+    int show1(){
+        return a;
+    }
+
+
+
+
+
+
+
+}
+class B extends A{
+    char a;
+    char show2(){
+        return a;
+    }
+
+
+
+
+
+}
+class C extends A{
+    float f;
+    float show3(){
+        return f;
+    }
+
+
+
+
+}
+class D extends  A{
+    double f;
+    double show4(){
+        return f;
+    }
+
+
+
+
+}
+class  E extends B{
+    byte f;
+    byte show5(){
+        return f;
+    }
+}
+class  F extends C{
+    short f;
+    short show6(){
+        return f;
+    }
+}
+class G extends D{
+    boolean f;
+    boolean show7(){
+        return f;
+    }
+}
+class  H extends F{
+    long f;
+    long show8(){
+        return f;
+    }
+}
+class  I extends G{
+    String f;
+    String show9(){
+        return f;
+    }
+}
+
+
+public class Pattern1 {
+
+    public static void main(String[] args) {
+        I k=new I();
+        System.out.println(k.show1());
+       
+        System.out.println(k.show9());
+
+
+
+
+
+
+    }
+}
+===================
+
