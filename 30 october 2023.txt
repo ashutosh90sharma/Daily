@@ -1,0 +1,727 @@
+1)abstraction class A 
+ab method1()
+
+class B ex A
+
+
+class Main 
+access
+
+abstract class A{
+    abstract void a();
+
+
+}
+class B extends A{
+    void a(){
+        System.out.println("hello world");
+    }
+
+
+}
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        B k=new B();
+        k.a();
+
+
+        
+    }
+}
+--------------------------------------------
+no reutrn and argument 
+2)abstraction class A 
+ab method1()
+
+class B ex A
+
+
+class Main 
+access
+
+abstract class A{
+    abstract void a(int a);
+
+
+}
+class B extends A{
+    void a(int a){
+        System.out.println(a);
+    }
+
+
+}
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        B k=new B();
+        k.a(2);
+
+
+        
+    }
+}
+--------------------------------------------
+reutrn and no argument 
+3)abstraction class A 
+ab method1()
+
+class B ex A
+
+
+class Main 
+access
+abstract class A{
+    abstract int  a();
+
+
+}
+class B extends A{
+    int  a(){
+        return 0;
+    }
+
+
+}
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        B k=new B();
+        System.out.println(k.a());;
+
+
+        
+    }
+}
+--------------------------------------------
+ reutrn and argument 
+4)abstraction class A 
+ab method1()
+
+class B ex A
+
+
+class Main 
+access
+
+abstract class A{
+    abstract int  a(int a);
+
+
+}
+class B extends A{
+    int  a(int a){
+        return a;
+    }
+
+
+}
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        B k=new B();
+        System.out.println(k.a(5));;
+
+
+        
+    }
+}
+--------------------------------------------
+5)
+ab A 
+method1() 
+method2() 
+
+ab B 
+method3()
+method4()
+
+C ex A
+
+
+D ex B
+
+E ex C
+
+Main()
+access
+abstract class A{
+    abstract void  method1();
+    abstract void method2();
+
+
+}
+abstract class B {
+    abstract void method3();
+    abstract void method4();
+
+
+}
+class C extends A{
+    void method1(){
+        System.out.println("method 1");
+
+    }
+    void method2(){
+        System.out.println("method 2");
+
+
+    }
+}
+class D extends B{
+    void method3(){
+        System.out.println("method 3");
+
+    }
+    void method4(){
+        System.out.println("method 4");
+
+    }
+}
+class E extends C{
+    void e(){
+        System.out.println("e method");
+    }
+}
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        E k=new E();
+        D k1=new D();
+        k.method2();
+        k.e();
+        k1.method3();
+
+
+
+        
+    }
+}
+---------------
+6)
+
+ab A 
+method1() :no return and no argument 
+method2() :no return and  argument 
+
+ab B 
+method3(): return and no argument 
+method4(): return and  argument 
+
+C ex A
+
+
+D ex B
+
+E ex C
+
+Main()
+access
+abstract class A{
+    abstract void  method1();
+    abstract void method2(int a);
+
+
+}
+abstract class B {
+    abstract int  method3();
+    abstract int  method4(int a);
+
+
+}
+class C extends A{
+    void method1(){
+        System.out.println("method 1");
+
+    }
+    void method2(int a){
+        System.out.println(a);
+
+
+    }
+}
+class D extends B{
+    int  method3(){
+        return 5;
+
+    }
+    int  method4(int a){
+        return a;
+
+    }
+}
+class E extends C{
+    void e(){
+        System.out.println("e method");
+    }
+}
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        E k=new E();
+        D k1=new D();
+        k.method1();
+        k.method2(2);
+        System.out.println(k1.method3());;
+        System.out.println(k1.method4(2));
+
+
+
+        
+    }
+}
+----------------
+7)
+absract class A 
+return and argument method {return type class }
+
+class B ex A 
+Main() =>access 
+
+abstract class A{
+    abstract A  method1();
+
+
+
+}
+class B extends A{
+    A method1(){
+        return this;
+    }
+}
+
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        B k=new B();
+        System.out.println(k.method1());
+
+
+
+        
+    }
+}
+
+8)
+absract class A 
+return and argument method {return type byte}
+
+class B ex A 
+Main() =>access 
+import java.util.*;
+abstract class A{
+    abstract byte  method1(byte a);
+
+
+
+}
+class B extends A{
+    byte method1(byte a){
+        return a;
+    }
+}
+
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        byte a=sc.nextByte();
+
+        B k=new B();
+        System.out.println(k.method1(a));
+
+
+
+        
+    }
+}
+
+----------------
+9)
+absract class A 
+return and argument method {return type short }
+
+class B ex A 
+Main() =>access 
+
+import java.util.*;
+abstract class A{
+    abstract short  method1(short a);
+
+
+
+}
+class B extends A{
+    short method1(short a){
+        return a;
+    }
+}
+
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        short a=sc.nextShort();
+
+        B k=new B();
+        System.out.println(k.method1(a));
+
+
+
+        
+    }
+}
+
+----------------
+10)
+absract class A 
+return and argument method {return type boolean }
+
+class B ex A 
+Main() =>access 
+import java.util.*;
+abstract class A{
+    abstract boolean  method1(boolean a);
+
+
+
+}
+class B extends A{
+    boolean method1(boolean a){
+        return a;
+    }
+}
+
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        boolean a=sc.nextBoolean();
+
+        B k=new B();
+        System.out.println(k.method1(a));
+
+
+
+        
+    }
+}
+
+----------------
+11)
+absract class A 
+return and argument method {return type int }
+
+class B ex A 
+Main() =>access 
+import java.util.*;
+abstract class A{
+    abstract int   method1(int  a);
+
+
+
+}
+class B extends A{
+    int  method1(int  a){
+        return a;
+    }
+}
+
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+
+        B k=new B();
+        System.out.println(k.method1(a));
+
+
+
+        
+    }
+}
+
+----------------
+12)
+absract class A 
+return and argument method {return type long }
+
+class B ex A 
+Main() =>access 
+import java.util.*;
+abstract class A{
+    abstract long  method1(long a);
+
+
+
+}
+class B extends A{
+    long method1(long a){
+        return a;
+    }
+}
+
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        long a=sc.nextLong();
+
+        B k=new B();
+        System.out.println(k.method1(a));
+
+
+
+        
+    }
+}
+
+----------------
+13)
+absract class A 
+return and argument method {return type double }
+
+class B ex A 
+Main() =>access 
+import java.util.*;
+abstract class A{
+    abstract double  method1(double a);
+
+
+
+}
+class B extends A{
+    double method1(double a){
+        return a;
+    }
+}
+
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        double a=sc.nextDouble();
+
+        B k=new B();
+        System.out.println(k.method1(a));
+
+
+
+        
+    }
+}
+
+----------------
+14)
+absract class A 
+return and argument method {return type float }
+
+class B ex A 
+Main() =>access import java.util.*;
+abstract class A{
+    abstract float  method1(float a);
+
+
+
+}
+class B extends A{
+    float method1(float a){
+        return a;
+    }
+}
+
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        float a=sc.nextFloat();
+
+        B k=new B();
+        System.out.println(k.method1(a));
+
+
+
+        
+    }
+}
+
+----------------
+15)
+absract class A 
+return and argument method {return type Stirng }
+
+class B ex A 
+Main() =>access 
+
+import java.util.*;
+abstract class A{
+    abstract String  method1(String a);
+
+
+
+}
+class B extends A{
+    String method1(String a){
+        return a;
+    }
+}
+
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        String a=sc.next();
+
+        B k=new B();
+        System.out.println(k.method1(a));
+
+
+
+        
+    }
+}
+
+----------------
+16)
+absract class A 
+return and argument method {return type char }
+
+class B ex A 
+Main() =>access
+import java.util.*;
+abstract class A{
+    abstract char  method1(char a);
+
+
+
+}
+class B extends A{
+    char method1(char a){
+        return a;
+    }
+}
+
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        chat a=sc.next().chatAt(0);
+
+        B k=new B();
+        System.out.println(k.method1(a));
+
+
+
+        
+    }
+} 
+
+------------------------------
+17)
+abstract A 
+
+B ex A 
+
+C ex B
+
+D ex C 
+
+Main()
+access
+
+import java.util.*;
+abstract class A{
+    abstract char method1(char a);
+
+
+
+}
+class B extends A{
+    char method1(char a){
+        return a;
+    }
+    void b(){
+        System.out.println("this is b");
+    }
+}
+class C extends  B{
+    void c(){
+        System.out.println("this is c");
+    }
+}
+class D extends C{
+    void d(){
+        System.out.println("this is d");
+    }
+}
+
+
+
+
+public class Pattern1 {
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+       char c=sc.next().charAt(0);
+       D k=new D();
+        System.out.println(k.method1(c));
+        k.b();
+        k.c();
+        k.d();
+
+
+
+        
+    }
+}
+----------------
