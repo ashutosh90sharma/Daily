@@ -1,0 +1,1917 @@
+1) 
+default constructor 
+file A 
+single level inheritance 
+
+file B 
+mutlilevel inheritance 
+
+file C 
+heirarichal inheritance 
+
+file D
+access
+
+user input 
+--
+ class Naru{
+    void Show(){
+        System.out.println("hi");
+    }
+
+
+}
+class AN extends Naru{
+
+--
+public class File1 {
+    void show(){
+        System.out.println("this is File1");
+    }
+
+}
+class A extends File1{
+
+}
+class C extends A{
+
+}
+--
+public class File2 {
+    void show(){
+        System.out.println("this is File2");
+    }
+}
+class  F extends File2{
+
+}
+class B extends File2{
+
+}
+---
+import java.util.Scanner;
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        Naru k=new AN();
+        k.Show();
+        File1 k1=new C();
+        k1.show();
+
+        File2 k4=new B();
+        k4.show();
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+------------------------------------------------------
+2)
+parameterised constructor 
+file A 
+single level inheritance 
+
+file B 
+mutlilevel inheritance 
+
+file C 
+heirarichal inheritance 
+
+file D
+access
+
+user input
+class Naru{
+
+    void Show(int a){
+        System.out.println(a);
+    }
+
+
+}
+class AN extends Naru{
+    int a;
+    AN(int a){
+        this.a=a;
+         Show(a);
+
+
+    }
+
+}
+----------
+public class File1 {
+    int  show(int a){
+        System.out.println(a);
+        return 0;
+    }
+
+}
+class A extends File1{
+
+
+}
+class C extends A{
+    C(int a){
+        show(a);
+    }
+
+
+}
+
+---
+public class File2 {
+    void show(int a){
+        System.out.println(a);
+    }
+}
+class  F extends File2{
+
+}
+class B extends File2{
+    B(int b){
+        show(b);
+
+    }
+
+}
+--
+import java.util.Scanner;
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        new AN(3);
+        new C(4);
+        new B(5);
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+---------- 
+------------------------------------------------------
+3)
+getter or setter method  
+
+file A 
+single level inheritance 
+
+file B 
+mutlilevel inheritance 
+
+file C 
+heirarichal inheritance 
+
+file D
+access
+----------------------------------------------------------
+4)
+single level inheritance :
+method : public 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+import java.util.Scanner;
+class H{
+    public void show6(){
+        System.out.println("hello");
+    }
+}
+class G extends H{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        G k=new G();
+        k.show6();
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+----------------------------------------------------------
+5)
+multi level inheritance :
+method : public 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+import java.util.Scanner;
+class H{
+    public void show6(){
+        System.out.println("hello");
+    }
+}
+class G extends H{
+
+}
+class I extends G{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        G k=new G();
+        k.show6();
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+----------------------------
+6)
+heirarichal level inheritance :
+method : public 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+import java.util.Scanner;
+class H{
+    public void show6(){
+        System.out.println("hello");
+    }
+}
+class G extends H{
+
+}
+class I extends H{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        G k=new G();
+        k.show6();
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+*************************************************************
+7)single level inheritance :
+method : private 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+import java.util.Scanner;
+class H{
+    private void show6(){
+        System.out.println("hello");
+    }
+}
+class G extends H{
+
+}
+class I extends H{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        G k=new G();
+        k.show6();
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+error
+----------------------------------------------------------
+8)
+multi level inheritance :
+method : private 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+import java.util.Scanner;
+class H{
+    private void show6(){
+        System.out.println("hello");
+    }
+}
+class G extends H{
+
+}
+class I extends G{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        G k=new G();
+        k.show6();
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+error
+----------------------------
+9)
+heirarichal level inheritance :
+method : private 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+import java.util.Scanner;
+class H{
+    private void show6(){
+        System.out.println("hello");
+    }
+}
+class G extends H{
+
+}
+class I extends H{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        G k=new G();
+        k.show6();
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+error
+----------------------------------------
+*************************************************************
+10)single level inheritance :
+method : protected 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+
+import java.util.Scanner;
+class H{
+    procateted void show6(){
+        System.out.println("hello");
+    }
+}
+class G extends H{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        H k=new H();
+        k.show6();
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+error
+----------------------------------------------------------
+11)
+multi level inheritance :
+method : protected 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+import java.util.Scanner;
+class H{
+    protected void show6(){
+        System.out.println("hello");
+    }
+}
+class G extends H{
+
+}
+class I extends G{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        I k=new I();
+        k.show6();
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+----------------------------
+12)
+heirarichal level inheritance :
+method : protected 
+
+Main class access 
+
+a)through aggregation 
+b)without aggrega
+import java.util.Scanner;
+class H{
+    protected void show6(){
+        System.out.println("hello");
+    }
+}
+class G extends H{
+
+}
+class I extends H{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        I k=new I();
+        k.show6();
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+----------------------------------------
+13)
+heirarichal level inheritance :
+instance varaible :protected 
+method : protected 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+    protected void show6(int a){
+        System.out.println(a);
+    }
+}
+class G extends H{
+
+}
+class I extends H{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        I k=new I();
+        k.show6(2);;
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+-----------------------------------------------
+14)
+multi level inheritance :
+instance varaible :protected 
+
+method : protected 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+import java.util.Scanner;
+class H{
+    protected int a;
+    protected void show6(int a){
+        System.out.println(a);
+    }
+}
+class G extends H{
+
+}
+class I extends G{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        I k=new I();
+        k.show6(2);;
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+---------------------------------------------
+15)
+single level inheritance :
+instance varaible :protected 
+
+method : protected 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+
+import java.util.Scanner;
+class H{
+    protected int a;
+    protected void show6(int a){
+        System.out.println(a);
+    }
+}
+class G extends H{
+
+}
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        H k=new H();
+        k.show6(2);;
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+----------------------------------------------------------
+16)single level inheritance :
+
+instance varaible :private 
+
+method : private 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+import java.util.Scanner;
+class H{
+    private int a;
+    private void show6(int a){
+        System.out.println(a);
+    }
+}
+class G extends H{
+
+}
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        H k=new H();
+        k.show6(2);;
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+error
+----------------------------------------------------------
+17)
+multi level inheritance :
+
+instance varaible :private 
+
+method : private 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+import java.util.Scanner;
+class H{
+    private int a;
+    private void show6(int a){
+        System.out.println(a);
+    }
+}
+class G extends H{
+
+}
+class I extends G{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        I k=new I();
+        k.show6(2);;
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+error
+----------------------------
+18)
+heirarichal level inheritance :
+instance varaible :private 
+
+method : private 
+
+Main class access 
+
+a)through aggregation 
+b)without aggregation
+import java.util.Scanner;
+class H{
+    private int a;
+    private void show6(int a){
+        System.out.println(a);
+    }
+}
+class G extends H{
+
+}
+class I extends H{
+
+}
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        I k=new I();
+        k.show6(2);;
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+error
+----------------------------------------
+19)
+file A
+outer class 
+
+inner class static : method non static 
+
+access 
+
+file B
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1.A f=new File1.A();
+        f.show();
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}--
+public class File1 {
+    static class A{
+        void show(){
+            System.out.println("hello");
+        }
+    }
+
+
+}
+
+
+-----------------------------------------------
+20)
+file A
+outer class 
+
+inner class static : method  static 
+
+access 
+
+file B
+public class File1 {
+    static class A{
+        static void show(){
+            System.out.println("hello");
+        }
+    }
+
+
+}
+
+---
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1.A f=new File1.A();
+        f.show();
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+-----------------------------------------
+21)
+file A
+outer class 
+instance varaible static 
+inner class static : method non static variable (static)
+
+access 
+
+file B
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1.A f=new File1.A();
+        f.show();
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+---
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1.A f=new File1.A();
+        f.show();
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+--------------------------------------------------
+22)
+file A
+outer class 
+public instance varaible static 
+inner public class static : method non static variable (static)
+
+access 
+
+file B
+public class File1 {
+    public static class A{
+        static boolean s;
+         void show(){
+            System.out.println(s);
+        }
+    }
+
+
+}
+
+--
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1.A f=new File1.A();
+        f.show();
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+---
+-----------------------------
+23)
+file A
+outer class 
+instance varaible static private
+inner private class static : method non static variable (static)
+
+access 
+
+file B
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1.A f=new File1.A();
+        f.show();
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+--
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1.A f=new File1.A();
+        f.show();
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+-----------------------------
+24)file A
+outer class 
+instance varaible static protected 
+inner protected class static : method non static variable (static)
+
+access 
+
+file B
+public class File1 {
+    protected static  class A{
+        static boolean s;
+         void show(){
+            System.out.println(s);
+        }
+    }
+
+
+}
+
+---
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1.A f=new File1.A();
+        f.show();
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+---------------------------------------------------
+25)
+file A 
+
+outer class 
+public inner class 
+public method 
+
+file B 
+public class File1 {
+    public static  class A{
+
+        public void show(){
+            System.out.println("hello");
+        }
+    }
+
+
+}
+---
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1.A f=new File1.A();
+        f.show();
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+
+
+-----------------------
+26)
+file A 
+
+outer class 
+private inner class 
+private method 
+
+file B 
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1.A f=new File1.A();
+        f.show();
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+---
+public class File1 {
+    private static  class A{
+
+        private void show(){
+            System.out.println("hello");
+        }
+    }
+
+
+}
+
+
+-------------------------
+27)
+file A 
+
+outer class 
+protected inner class 
+protected method 
+
+file B 
+public class File1 {
+    protected static  class A{
+
+        protected void show(){
+            System.out.println("hello");
+        }
+    }
+
+
+}
+
+--
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1.A f=new File1.A();
+        f.show();
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+-----------------------------------------
+29)
+file A
+class A 
+constructor private 
+
+
+file B
+access
+public class File1 {
+     private File1(){
+        System.out.println("File1");
+    }
+
+
+}
+
+---
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1 f=new File1();
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+ 
+
+-------------------------------
+30)
+
+file A
+class A 
+constructor public 
+
+
+file B
+access
+public class File1 {
+     public File1(){
+        System.out.println("File1");
+    }
+
+
+}
+
+---
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1 f=new File1();
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+} 
+----------------------
+31)
+file A
+class A 
+constructor protected 
+
+
+file B
+access 
+public class File1 {
+     procated File1(){
+        System.out.println("File1");
+    }
+
+
+}
+
+---
+
+ class Pattern1  {
+
+
+    public static void main(String [] args) {
+
+        File1 f=new File1();
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+-------------------
+32)
+single level 
+file A 
+constructor public 
+
+file B 
+constructor public 
+
+
+file C
+acess 
+public class File1 {
+     protected File1(){
+        System.out.println("File1");
+    }
+
+
+}
+class AB extends File1{
+    AB(){
+        System.out.println("AB");
+    }
+}
+
+---
+
+ class Pattern1  {
+
+
+
+
+     public static void main(String [] args) {
+
+        AB k=new AB();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+----------------------
+33)
+mutlilvel level 
+file A 
+constructor public 
+
+file B 
+constructor public 
+
+
+file C
+acess 
+
+public class File1 {
+     protected File1(){
+        System.out.println("File1");
+    }
+
+
+}
+class AB extends File1{
+    AB(){
+        super();
+        System.out.println("AB");
+    }
+}
+class BA extends AB{
+    
+}
+
+---
+
+ class Pattern1  {
+
+
+
+
+     public static void main(String [] args) {
+
+        BA k=new BA();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+------------------------------
+34)
+heirarichal level 
+file A 
+constructor public 
+
+file B 
+constructor public 
+
+
+file C
+acess 
+public class File1 {
+     protected File1(){
+        System.out.println("File1");
+    }
+
+
+}
+class AB extends File1{
+    AB(){
+        super();
+        System.out.println("AB");
+    }
+}
+class BA extends File1{
+
+
+}
+
+---
+
+ class Pattern1  {
+
+
+
+
+     public static void main(String [] args) {
+
+        BA k=new BA();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+----------------------------------
+------------------------------
+35)
+simple level 
+file A 
+constructor private 
+
+file B 
+constructor private 
+
+
+file C
+acess 
+public class File1 {
+     private File1(){
+        System.out.println("File1");
+    }
+
+
+}
+class AB extends File1{
+    AB(){
+        super();
+        System.out.println("AB");
+    }
+}
+
+
+---
+
+ class Pattern1  {
+
+
+
+
+     public static void main(String [] args) {
+
+        AB k=new AB();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+error
+------------------------------
+36)
+mutlilvel level 
+file A 
+constructor private 
+
+file B 
+constructor private 
+
+
+file C
+acess
+public class File1 {
+     private File1(){
+        System.out.println("File1");
+    }
+
+
+}
+class AB extends File1{
+    AB(){
+        super();
+        System.out.println("AB");
+    }
+}
+class BA extends AB{
+
+
+}
+
+---
+
+ class Pattern1  {
+
+
+
+
+     public static void main(String [] args) {
+
+        BA k=new BA();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+error
+------------------------------
+37)
+heirarichal level 
+file A 
+constructor private 
+
+file B 
+constructor private 
+
+
+file C
+acess
+public class File1 {
+     private File1(){
+        System.out.println("File1");
+    }
+
+
+}
+class AB extends File1{
+    AB(){
+        super();
+        System.out.println("AB");
+    }
+}
+class BA extends File1{
+
+
+}
+
+---
+
+ class Pattern1  {
+
+
+
+
+     public static void main(String [] args) {
+
+        BA k=new BA();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+error
+------------------------------
+38)
+simple level 
+file A 
+constructor protected 
+
+file B 
+constructor protected 
+
+
+file C
+acess
+public class File1 {
+     protected File1(){
+        System.out.println("File1");
+    }
+
+
+}
+class AB extends File1{
+    AB(){
+        super();
+        System.out.println("AB");
+    }
+}
+
+
+
+ class Pattern1  {
+
+
+
+
+     public static void main(String [] args) {
+
+        AB k=new AB();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+------------------------------
+39)
+multilevel level 
+file A 
+constructor protected 
+
+file B 
+constructor protected 
+
+
+file C
+acess
+public class File1 {
+     protected File1(){
+        System.out.println("File1");
+    }
+
+
+}
+class AB extends File1{
+    AB(){
+        super();
+        System.out.println("AB");
+    }
+}
+class BA extends AB{
+
+
+}
+
+
+ class Pattern1  {
+
+
+
+
+     public static void main(String [] args) {
+
+        BA k=new BA();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+------------------------------
+40)
+heirarichal level 
+file A 
+constructor protected 
+
+file B 
+constructor protected 
+
+
+file C
+acess
+public class File1 {
+     protected File1(){
+        System.out.println("File1");
+    }
+
+
+}
+class AB extends File1{
+    AB(){
+        super();
+        System.out.println("AB");
+    }
+}
+class BA extends File1{
+
+
+}
+
+
+ class Pattern1  {
+
+
+
+
+     public static void main(String [] args) {
+
+        BA k=new BA();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
+
+-----------------------------------------------------
