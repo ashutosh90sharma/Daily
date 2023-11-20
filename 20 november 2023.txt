@@ -1,0 +1,561 @@
+1)array 
+12 45 67 89 23 :int 
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+       Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+       int a[]=new int[size];
+       for(int i=0;i<size;i++){
+           a[i]=sc.nextInt();
+       }
+        System.out.println("======");
+        for(int i=0;i<size;i++){
+            System.out.print(a[i]+" ");
+        }
+
+
+
+
+
+    }
+
+
+}
+
+
+2)
+data type unmey aap array 
+char a[]={'j', 'u', 'e'};
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+       Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        char a[]=new char[size];
+       for(int i=0;i<size;i++){
+           a[i]=sc.next().charAt(0);
+       }
+        System.out.println("======");
+        for(int i=0;i<size;i++){
+            System.out.print(a[i]+" ");
+        }
+
+
+
+
+
+    }
+
+
+}
+byte 
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+       Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        byte a[]=new byte[size];
+       for(int i=0;i<size;i++){
+           a[i]=sc.nextByte();
+       }
+        System.out.println("======");
+        for(int i=0;i<size;i++){
+            System.out.print(a[i]+" ");
+        }
+
+
+
+
+
+    }
+
+
+}
+short 
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+       Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        short a[]=new short[size];
+       for(int i=0;i<size;i++){
+           a[i]=sc.nextShort();
+       }
+        System.out.println("======");
+        for(int i=0;i<size;i++){
+            System.out.print(a[i]+" ");
+        }
+
+
+
+
+
+    }
+
+
+}
+
+3)
+input :
+1,2,3,4,5 
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+       Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        int  a[]=new int [size];
+       for(int i=0;i<size;i++){
+           a[i]=sc.nextInt();
+       }
+        System.out.println("======");
+        for(int i=size-1;i>=0;i--){
+            System.out.print(a[i]+" ");
+        }
+
+
+
+
+
+    }
+
+
+}
+
+output:
+5,4,3,2,1 
+
+4)
+1,2,3,4,5 
+only and only even number 
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+       Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        int  a[]=new int [size];
+       for(int i=0;i<size;i++){
+           a[i]=sc.nextInt();
+       }
+        System.out.println("======");
+        for(int i=1;i<size;i++){
+            if(a[i]%2==0){
+                System.out.print(a[i]+" ");
+            }
+
+        }
+
+
+
+
+
+    }
+
+
+}
+
+5)
+1,2,3,4,5 
+only and only odd number
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+       Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        int  a[]=new int [size];
+       for(int i=0;i<size;i++){
+           a[i]=sc.nextInt();
+       }
+        System.out.println("======");
+        for(int i=1;i<size;i++){
+            if(a[i]%2!=0){
+                System.out.print(a[i]+" ");
+            }
+
+        }
+
+
+
+
+
+    }
+
+
+} 
+
+6)
+input :
+1,2,3,4,5,6,7,8,9,10 
+
+output: 
+1,2,3,4,5,10,9,8,7,6
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+       Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        int  a[]=new int [size];
+       for(int i=0;i<size;i++){
+           a[i]=sc.nextInt();
+       }
+        System.out.println("======");
+        for(int i=0;i<size-5;i++){
+            System.out.print(a[i]+",");
+        }
+        for(int i=size-1;i>=5;i--){
+            System.out.print(a[i]+",");
+        }
+
+
+
+
+
+    }
+
+
+} 
+
+7)
+input :
+1,2,3,4,5,6,7,8,9,10 
+
+output :
+5,4,3,2,1,6,7,8,9,10 
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+       Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        int  a[]=new int [size];
+       for(int i=0;i<size;i++){
+           a[i]=sc.nextInt();
+       }
+        System.out.println("======");
+        for(int i=size-5-1;i>=0;i--){
+            System.out.print(a[i]+",");
+        }
+        for(int i=5;i<size;i++){
+            System.out.print(a[i]+",");
+        }
+        
+
+
+
+
+    }
+
+
+}
+
+
+8)
+Problem Statement – Chaman planned to choose a four digit lucky number for his car. His
+lucky numbers are 3,5 and 7. Help him find the number, whose sum is divisible by 3 or 5 or
+7. Provide a valid car number, Fails to provide a valid input then display that number is not a
+valid car number.
+
+
+Note : The input other than 4 digit positive number[includes negative and 0] is considered as
+invalid.
+Refer the samples, to read and display the data.
+
+
+Sample Input 1:
+Enter the car no:1234
+Sample Output 1:
+Lucky Number
+
+
+Sample Input 2:
+Enter the car no:1214
+Sample Output 2:
+Sorry its not my lucky number
+
+
+Sample Input 3:
+Enter the car no:14
+Sample Output 3:
+14 is not a valid car number 
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the car number ");
+        int number=sc.nextInt();
+        int num1=number;
+        int count=0;
+        int sum=0;
+        while(num1>0){
+           int digit= num1%10;
+           sum+=digit;
+           num1/=10;
+           count++;
+
+        }
+
+        if(count==4){
+            if(sum%3==0||sum%5==0||sum%7==0){
+                System.out.println("Luckey Number");
+            }
+            else {
+                System.out.println("Sorry its not my lucky number");
+            }
+        }
+        else {
+            System.out.println(number+" is not a valid number");
+        }
+
+
+
+
+
+
+
+
+    }
+
+
+}
+9)
+XYZ Technologies is in the process of increment the salary of the employees. This
+increment is done based on their salary and their performance appraisal rating.
+If the appraisal rating is between 1 and 3, the increment is 10% of the salary.
+If the appraisal rating is between 3.1 and 4, the increment is 25% of the salary.
+If the appraisal rating is between 4.1 and 5, the increment is 30% of the salary.
+Help them to do this, by writing a program that displays the incremented salary. Write a
+class “IncrementCalculation.java” and write the main method in it.
+Note : If either the salary is 0 or negative (or) if the appraisal rating is not in the range 1 to
+5 (inclusive), then the output should be “Invalid Input”.
+
+
+Sample Input 1 :
+Enter the salary
+8000
+Enter the Performance appraisal rating
+3
+Sample Output 1 :
+8800
+
+
+Sample Input 2 :
+Enter the salary
+7500
+Enter the Performance appraisal rating
+4.3
+Sample Output 2 :
+9750
+
+
+Sample Input 3 :
+Enter the salary
+-5000
+Enter the Performance appraisal rating
+6
+Sample Output 3 :
+Invalid Input
+import java.util.Scanner;
+
+public class IncrementCalculation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get the salary from the user
+        System.out.println("Enter the salary");
+        double salary = scanner.nextDouble();
+
+        // Get the performance appraisal rating from the user
+        System.out.println("Enter the Performance appraisal rating");
+        double appraisalRating = scanner.nextDouble();
+
+        // Check for invalid input conditions
+        if (salary <= 0 || appraisalRating < 1 || appraisalRating > 5) {
+            System.out.println("Invalid Input");
+        } else {
+            // Calculate increment based on appraisal rating
+            double increment;
+            if (appraisalRating >= 1 && appraisalRating <= 3) {
+                increment = 0.1 * salary;
+            } else if (appraisalRating > 3 && appraisalRating <= 4) {
+                increment = 0.25 * salary;
+            } else {
+                increment = 0.3 * salary;
+            }
+
+            // Calculate and display the incremented salary
+            double incrementedSalary = salary + increment;
+            System.out.println("Incremented Salary: " + incrementedSalary);
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+
+
+10)array: 
+a)
+input :67,23,-78,34,-23,0,12,-98,0,32,65,-13 
+1)check positive element which 
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        int  a[]=new int [size];
+        for(int i=0;i<size;i++){
+            a[i]=sc.nextInt();
+        }
+        System.out.println("======");
+        int positive=0;
+        int negative=0;
+        int zero=0;
+        for(int i=0;i<size;i++){
+            if(a[i]>0){
+                System.out.print(a[i]+" ");
+            }
+        }
+
+
+
+
+
+    }
+
+
+}
+2)check negative element kon kon se hey 
+{
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        int  a[]=new int [size];
+        for(int i=0;i<size;i++){
+            a[i]=sc.nextInt();
+        }
+        System.out.println("======");
+        int positive=0;
+        int negative=0;
+        int zero=0;
+        for(int i=0;i<size;i++){
+            if(a[i]<0){
+                System.out.print(a[i]+" ");
+            }
+        }
+
+
+
+
+
+    }
+
+
+}
+3)zero hey kya 
+{
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        int  a[]=new int [size];
+        for(int i=0;i<size;i++){
+            a[i]=sc.nextInt();
+        }
+        System.out.println("======");
+        int positive=0;
+        int negative=0;
+        int zero=0;
+        for(int i=0;i<size;i++){
+            if(a[i]==0){
+                System.out.print(a[i]+" ");
+            }
+        }
+
+
+
+
+
+    }
+
+
+}
+
+b)
+how many element is positive count 
+how many element is negative 
+how many element is zero 
+import java.util.*;
+class Pattern1  {
+
+
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int size=sc.nextInt();
+        int  a[]=new int [size];
+        for(int i=0;i<size;i++){
+            a[i]=sc.nextInt();
+        }
+        System.out.println("======");
+        int positive=0;
+        int negative=0;
+        int zero=0;
+        for(int i=0;i<size;i++){
+            if(a[i]>0){
+               positive++;
+            } else if (a[i]<0) {
+                negative++;
+
+            }
+            else {
+                zero++;
+            }
+        }
+        System.out.println("positive"+positive);
+        System.out.println("negative"+negative);
+        System.out.println("Zero"+zero);
+
+
+
+
+
+    }
+
+
+}
